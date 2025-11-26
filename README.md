@@ -32,7 +32,20 @@ A dataset containing Indian movies with the same features.
 The datasets were cleaned by removing missing and invalid values. Movies were also filtered based on country information to ensure that only Turkish and Indian movies were included.
 
 ## Machine Learning
-In the final stage of the project, a machine learning model is used to predict IMDb ratings based on movie features. The purpose of this model is to test whether ratings can be estimated using information such as genre, release year, runtime and country.
+
+After analyzing the historical trends of Turkish and Indian cinema, I wanted to take this project a step further: **Can we predict the success of a movie before it is even filmed?**
+
+To answer this, I integrated a Machine Learning model using a **Classification approach**.
+
+**The Logic Behind the Model**
+Imagine a producer holding a script for a new movie. They know the genre (e.g., Drama) and the planned duration (e.g., 100 minutes), but they don't know if the audience will like it. My model acts as a **digital decision support system** to help answer that question.
+
+**How It Works**
+1.  **Defining Success:** First, I taught the computer what a "good movie" looks like. I established a threshold (IMDb rating of 6.5). Any movie above this score is labeled as "Successful," and anything below is labeled as "Average/Underperforming."
+2.  **Learning from History:** The model analyzed thousands of past Turkish and Indian movies. It learned patterns—for example, it might notice that "History" movies in Turkey tend to be rated higher when they are longer, whereas "Comedies" might fail if they drag on too long.
+3.  **Making Predictions:** Finally, the model uses these learned patterns to predict the probability of success for future movie concepts.
+
+
 
 ## Limitations and Future Work
 1. The datasets may not include all movies produced in Turkey and India.
