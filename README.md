@@ -27,9 +27,14 @@ Media Data: Top-ranked Netflix content (Movies & TV Series) was collected for ea
 
 Economic Data: Inflation and Unemployment rates were gathered(from the website "Trading Economics") for the corresponding six-month periods for all selected countries.
 
+## AI USAGE
+// to do on 2nd of jan
+
 ## Machine Learning
+// to do 2nd of jan
 
 ## Limitations and Future Work
+// to do 2nd of jan
 
 
 
