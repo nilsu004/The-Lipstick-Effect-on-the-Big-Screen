@@ -28,13 +28,13 @@ Media Data: Top-ranked Netflix content (Movies & TV Series) was collected for ea
 Economic Data: Inflation and Unemployment rates were gathered(from the website "Trading Economics") for the corresponding six-month periods for all selected countries.
 
 ## AI USAGE
-// to do on 2nd of jan
+In this project, Artificial Intelligence tools were used to assist with the general coding process. The AI was particularly helpful for data visualization, as it provided the necessary code to create clear graphs and charts. These visuals played a key role in analyzing the relationship between economic indicators and the popularity of specific media genres, making the results easier to understand and interpret.
 
 ## Machine Learning
 // to do 2nd of jan
 
 ## Limitations and Future Work
-// to do 2nd of jan
+The primary limitation of this research was the difficulty in accessing historical data. Specifically, consistent Netflix viewership data prior to 2023 was not available, which restricted the analysis to the 2023–2025 period. This relatively short timeframe makes it challenging to observe long-term trends between economic shifts and audience preferences. Future studies could improve this research by extending the timeline to cover a full economic cycle and by including data from other streaming platforms to gain a broader perspective on consumer behavior.
 
 
 
