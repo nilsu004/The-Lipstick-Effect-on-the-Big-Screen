@@ -102,23 +102,49 @@ In chronically unstable economies, escapism may already be normalized, leaving l
 In this project, Artificial Intelligence tools were used to assist with the general coding process. The AI was particularly helpful for data visualization, as it provided the necessary code to create clear graphs and charts. These visuals played a key role in analyzing the relationship between economic indicators and the popularity of specific media genres, making the results easier to understand and interpret.
 
 ## Machine Learning
-In this project, a simple machine learning model was used to check whether economic indicators and media characteristics can help predict Netflix view counts.
+To complement the statistical analysis, a supervised machine learning model was implemented to explore whether macroeconomic indicators and content characteristics can jointly predict media consumption intensity.
+Unlike the hypothesis-testing section, which focuses on correlation and causality, the purpose of the machine learning model is predictive rather than explanatory. The goal is to evaluate whether information about a country’s economic conditions and media genre contains enough signal to estimate expected viewership levels.
 
-A Random Forest Regressor was trained using the following features:
+1) Model Design
 
--Country (Turkey, Italy)
+A Random Forest Regressor was selected due to its ability to model non-linear relationships and interactions between variables without requiring strict statistical assumptions.
 
--Genre
+The model uses the following input features:
 
--Inflation rate
+Country (Turkey, Italy)
 
--Unemployment rate
+Media genre
 
-The target variable is total Netflix views.
-Categorical variables were converted using one-hot encoding, and the data was split into training (80%) and testing (20%) sets.
-The Actual vs. Predicted Views graph shows that the model can capture general viewing patterns, especially for low and medium view counts. However, it performs poorly for very high (blockbuster) titles. This suggests that genre and economic variables alone are not enough to explain extreme popularity, which is likely affected by platform algorithms, marketing, and global trends.
-Overall, the machine learning model supports the main findings of the project:
-macroeconomic indicators have limited power in predicting media consumption, especially in countries with long-term economic instability.
+Average inflation rate
+
+Average unemployment rate
+
+
+The target variable is total Netflix view counts.
+Categorical variables (country and genre) were transformed using one-hot encoding to make them compatible with the model. The dataset was split into training (80%) and testing (20%) sets to evaluate out-of-sample performance.
+
+2) Model Evaluation
+
+Model performance was evaluated using the R² score and visual inspection of predicted versus actual values.
+The Actual vs. Predicted Views scatter plot shows that the model performs reasonably well for low- and mid-range view counts, where most observations are concentrated. However, the model systematically underestimates extremely high viewership values (blockbuster titles).
+This behavior reflects two structural characteristics of the dataset:
+
+The distribution of views is highly skewed, with a small number of titles accounting for disproportionately high viewership.
+
+Economic indicators and genre information alone are insufficient to fully explain viral or blockbuster-level success, which is influenced by factors such as marketing, global trends, and platform algorithms.
+
+3) Interpretation in Context of the Research Question
+
+Importantly, the machine learning results do not contradict the main statistical findings of the study.
+The limited predictive power of the model reinforces the core conclusion:
+macroeconomic indicators are not a dominant driver of media consumption patterns, especially in structurally unstable economies such as Turkey.
+While the model captures general tendencies, it fails to produce precise predictions during periods of extreme popularity, suggesting that cultural and industry-specific dynamics play a larger role than economic stress alone.
+
+<img width="678" height="470" alt="ae500912-6c6e-4fc1-9f98-c897c25d55df" src="https://github.com/user-attachments/assets/9ae8f5fc-3cc6-4290-ba25-4de6ebc7b804" />
+
+This figure compares the actual Netflix view counts with the values predicted by the machine learning model.
+Each point represents one movie or TV show in the test dataset. The red dashed line shows the ideal prediction line, where predicted values are equal to actual values.
+Points closer to the diagonal indicate better model performance, while points far from the line show prediction errors. The spread of the points suggests that the model captures general trends but struggles with very high view counts, which are likely influenced by factors not included in the model.
 
 ## Limitations and Future Work
 The primary limitation of this research was the difficulty in accessing historical data. Specifically, consistent Netflix viewership data prior to 2023 was not available, which restricted the analysis to the 2023–2025 period. This relatively short timeframe makes it challenging to observe long-term trends between economic shifts and audience preferences. Future studies could improve this research by extending the timeline to cover a full economic cycle and by including data from other streaming platforms to gain a broader perspective on consumer behavior.
