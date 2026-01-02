@@ -103,11 +103,17 @@ In this project, Artificial Intelligence tools were used to assist with the gene
 
 ## Machine Learning
 In this project, a simple machine learning model was used to check whether economic indicators and media characteristics can help predict Netflix view counts.
+
 A Random Forest Regressor was trained using the following features:
-Country (Turkey, Italy)
-Genre
-Inflation rate
-Unemployment rate
+
+-Country (Turkey, Italy)
+
+-Genre
+
+-Inflation rate
+
+-Unemployment rate
+
 The target variable is total Netflix views.
 Categorical variables were converted using one-hot encoding, and the data was split into training (80%) and testing (20%) sets.
 The Actual vs. Predicted Views graph shows that the model can capture general viewing patterns, especially for low and medium view counts. However, it performs poorly for very high (blockbuster) titles. This suggests that genre and economic variables alone are not enough to explain extreme popularity, which is likely affected by platform algorithms, marketing, and global trends.
