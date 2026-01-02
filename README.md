@@ -102,7 +102,17 @@ In chronically unstable economies, escapism may already be normalized, leaving l
 In this project, Artificial Intelligence tools were used to assist with the general coding process. The AI was particularly helpful for data visualization, as it provided the necessary code to create clear graphs and charts. These visuals played a key role in analyzing the relationship between economic indicators and the popularity of specific media genres, making the results easier to understand and interpret.
 
 ## Machine Learning
-// to do 2nd of jan
+In this project, a simple machine learning model was used to check whether economic indicators and media characteristics can help predict Netflix view counts.
+A Random Forest Regressor was trained using the following features:
+Country (Turkey, Italy)
+Genre
+Inflation rate
+Unemployment rate
+The target variable is total Netflix views.
+Categorical variables were converted using one-hot encoding, and the data was split into training (80%) and testing (20%) sets.
+The Actual vs. Predicted Views graph shows that the model can capture general viewing patterns, especially for low and medium view counts. However, it performs poorly for very high (blockbuster) titles. This suggests that genre and economic variables alone are not enough to explain extreme popularity, which is likely affected by platform algorithms, marketing, and global trends.
+Overall, the machine learning model supports the main findings of the project:
+macroeconomic indicators have limited power in predicting media consumption, especially in countries with long-term economic instability.
 
 ## Limitations and Future Work
 The primary limitation of this research was the difficulty in accessing historical data. Specifically, consistent Netflix viewership data prior to 2023 was not available, which restricted the analysis to the 2023–2025 period. This relatively short timeframe makes it challenging to observe long-term trends between economic shifts and audience preferences. Future studies could improve this research by extending the timeline to cover a full economic cycle and by including data from other streaming platforms to gain a broader perspective on consumer behavior.
